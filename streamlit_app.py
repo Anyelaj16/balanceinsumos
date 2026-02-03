@@ -1,7 +1,6 @@
 import streamlit as st
 
 from src.cliente import render_cliente_view
-from src.direccion import render_direccion_view
 from src.styles import apply_custom_css
 
 # ---------------------------
@@ -15,15 +14,7 @@ st.set_page_config(
 apply_custom_css()
 
 # ---------------------------
-# Navegación
+# Vista Cliente (ÚNICA)
 # ---------------------------
-st.sidebar.title("SIPOR")
-vista = st.sidebar.radio(
-    "Selecciona una vista",
-    ["Cliente", "Dirección"]
-)
+render_cliente_view()
 
-if vista == "Cliente":
-    render_cliente_view()
-else:
-    render_direccion_view()
