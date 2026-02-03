@@ -10,7 +10,8 @@ from datetime import datetime
 
 # Cached function to load the raw Excel file
 @st.cache_data(ttl=300)
-def load_raw_data(file_path='data/Balance_Insumos.xlsx'):
+def load_raw_data(file_path='Balance_Insumos.xlsx'):
+
     """
     Load raw data from Excel file
     
